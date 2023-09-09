@@ -6,6 +6,7 @@ public class FilmManager {
     public FilmManager() {
         this.limit = 5;
     }
+
     public FilmManager(int limit) {
         this.limit = limit;
     }
@@ -25,10 +26,10 @@ public class FilmManager {
 
     public String[] findLast() {
         int resultLength;
-        if (films.length < limit) {
+        if (films.length <= 5) {
             resultLength = films.length;
         } else {
-            resultLength = limit;
+            resultLength = 6;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {
