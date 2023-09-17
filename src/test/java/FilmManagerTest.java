@@ -51,7 +51,7 @@ public class FilmManagerTest {
 
     @Test
     public void AddingLessLimit() {
-        FilmManager manager = new FilmManager();
+        FilmManager manager = new FilmManager(4);
         manager.add("Ankara");
         manager.add("Baghdad");
         manager.add("California");
@@ -63,7 +63,7 @@ public class FilmManagerTest {
 
     @Test
     public void MoreLimit() {
-        FilmManager manager = new FilmManager();
+        FilmManager manager = new FilmManager(4);
         manager.add("Ankara");
         manager.add("Baghdad");
         manager.add("California");
@@ -78,14 +78,13 @@ public class FilmManagerTest {
 
     @Test
     public void AddingLast() {
-        FilmManager manager = new FilmManager();
+        FilmManager manager = new FilmManager(4);
         manager.add("Ankara");
         manager.add("Baghdad");
         manager.add("California");
         manager.add("Dollar");
-        manager.add("Florence");
 
-        String[] expected = {"Florence", "Dollar", "California", "Baghdad", "Ankara"};
+        String[] expected = {"Dollar", "California", "Baghdad", "Ankara"};
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }

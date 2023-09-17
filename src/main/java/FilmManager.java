@@ -26,7 +26,7 @@ public class FilmManager {
 
     public String[] findLast() {
         int resultLength;
-        if (films.length <= 5) {
+        if (films.length <= limit) {
             resultLength = films.length;
         } else {
             resultLength = 6;
