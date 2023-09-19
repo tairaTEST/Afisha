@@ -71,7 +71,7 @@ public class FilmManagerTest {
         manager.add("Florence");
         manager.add("Gorgias");
 
-        String[] expected = {"Gorgias", "Florence", "Dollar", "California", "Baghdad", "Ankara"};
+        String[] expected = {"Gorgias", "Florence", "Dollar", "California"};
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }

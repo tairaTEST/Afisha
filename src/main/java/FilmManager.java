@@ -29,7 +29,7 @@ public class FilmManager {
         if (films.length <= limit) {
             resultLength = films.length;
         } else {
-            resultLength = 6;
+            resultLength = limit;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {
